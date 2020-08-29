@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    #    build: .
+    image: teruzoufox/ml-docker
+    container_name: ml-docker.app
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/notebooks
+    command: jupyter lab --allow-root
